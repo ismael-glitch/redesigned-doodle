@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connexion et création de compte Casa Ferretti">
+    <title>Espace client — Casa Ferretti</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main class="page">
+        <header class="navbar">
+            <a class="logo" href="/" aria-label="Accueil Casa Ferretti">Casa Ferretti</a>
+            <nav aria-label="Navigation principale">
+                <a href="/">Accueil</a>
+                <a href="#connexion">Se connecter</a>
+                <a href="#creation">Créer un compte</a>
+            </nav>
+        </header>
+
+        <section class="hero account-hero">
+            <p class="eyebrow">Espace client</p>
+            <h1>Ravi de vous retrouver.</h1>
+            <p class="description">Connectez-vous ou créez votre compte Casa Ferretti.</p>
+        </section>
+
+        <section id="session-panel" class="content-card session-panel" hidden>
+            <h2>Bonjour <span id="client-first-name"></span> !</h2>
+            <p>Vous êtes connecté à votre espace client.</p>
+            <button id="logout-button" class="primary-button" type="button">Se déconnecter</button>
+            <p id="session-message" class="form-message" role="status" aria-live="polite"></p>
+        </section>
+
+        <div id="account-forms" class="account-layout">
+            <section id="connexion" class="content-card account-card">
+                <h2>Se connecter</h2>
+                <p class="form-intro">Entrez les identifiants de votre compte.</p>
+                <form id="login-form">
+                    <label for="login-mail">Adresse e-mail</label>
+                    <input id="login-mail" name="mail" type="email" maxlength="254" autocomplete="username" required>
+
+                    <label for="login-password">Mot de passe</label>
+                    <input id="login-password" name="modepass" type="password" maxlength="128" autocomplete="current-password" required>
+
+                    <button class="primary-button" type="submit">Se connecter</button>
+                    <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+
+            <section id="creation" class="content-card account-card">
+                <h2>Créer un compte</h2>
+                <p class="form-intro">Tous les champs sont obligatoires.</p>
+                <form id="signup-form">
+                    <label for="signup-prenom">Prénom</label>
+                    <input id="signup-prenom" name="prenom" type="text" maxlength="100" autocomplete="given-name" required>
+
+                    <label for="signup-nom">Nom</label>
+                    <input id="signup-nom" name="nom" type="text" maxlength="100" autocomplete="family-name" required>
+
+                    <label for="signup-mail">Adresse e-mail</label>
+                    <input id="signup-mail" name="mail" type="email" maxlength="254" autocomplete="email" required>
+
+                    <label for="signup-address">Adresse</label>
+                    <input id="signup-address" name="address" type="text" maxlength="255" autocomplete="street-address" required>
+
+                    <label for="signup-birth-date">Date de naissance</label>
+                    <input id="signup-birth-date" name="date_naissance" type="date" autocomplete="bday" required>
+
+                    <label for="signup-password">Mot de passe (12 caractères minimum)</label>
+                    <input id="signup-password" name="modepass" type="password" minlength="12" maxlength="128" autocomplete="new-password" required>
+
+                    <button class="primary-button" type="submit">Créer mon compte</button>
+                    <p id="signup-message" class="form-message" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <aside class="cookie-consent" role="region" aria-label="Consentement aux cookies">
+        <p>Ce site utilise des cookies pour améliorer votre expérience.</p>
+        <button type="button" id="accept-cookies">Accepter</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>

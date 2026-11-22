@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page d'accueil moderne avec bandeau de consentement aux cookies">
+    <title>Bienvenue</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <main class="page">
+        <header class="navbar">
+            <a class="logo" href="#accueil" aria-label="Accueil">Casa Ferretti</a>
+            <nav aria-label="Navigation principale">
+                <a href="#accueil">Accueil</a>
+                <a href="#apropos">À propos</a>
+                <a href="/compte">Connexion / compte</a>
+            </nav>
+        </header>
+
+        <section class="hero" id="accueil">
+            <p class="eyebrow">Bienvenue sur notre site</p>
+            <h1>Bienvenue au restaurant Casa Ferretti</h1>
+            <p class="description">
+                Découvrez Casa Ferretti et retrouvez votre espace client
+                pour créer un compte ou vous connecter.
+            </p>
+            <a class="primary-button" href="/compte">Accéder à mon compte</a>
+            <a class="primary-button" href="/compte#creation">Ajouter un compte</a>
+        </section>
+
+        <section class="content-card" id="apropos">
+            <article>
+                <h2>À propos</h2>
+                <p>
+                    Bienvenue chez Casa Ferretti. Inscrivez-vous pour créer
+                    votre profil client.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <aside class="cookie-consent" role="region" aria-label="Consentement aux cookies">
+        <p>Ce site utilise des cookies pour améliorer votre expérience.</p>
+        <button type="button" id="accept-cookies">Accepter</button>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
